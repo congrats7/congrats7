@@ -1,1 +1,91 @@
-<mxfile host="app.diagrams.net" modified="2022-04-19T08:11:46.658Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" version="17.4.5" etag="Z4p-shS97LY_EYRyc78W" type="github"><diagram id="7ECV-DdMAltr5Zz9xdRy">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-04-21T04:26:38.519Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="mTKpYipLre4ALVZW_TtU" version="17.4.5" type="github">
+  <diagram id="7ECV-DdMAltr5Zz9xdRy" name="第 1 页">
+    <mxGraphModel dx="728" dy="1637" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ySgIPh1-fb9vkYEjXV9L-1" value="乘客passenger" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="160" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ySgIPh1-fb9vkYEjXV9L-2" value="FirstName （string）&#xa;LastName （string）" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;rounded=1;" vertex="1" parent="ySgIPh1-fb9vkYEjXV9L-1">
+          <mxGeometry y="30" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ySgIPh1-fb9vkYEjXV9L-4" value="航班flight" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="450" y="200" width="270" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="ySgIPh1-fb9vkYEjXV9L-5" value="号码 Number （string）&#xa;出发日期 DepartureDateTime（datetime）&#xa;到达日期 ArrivalTime（datetime）&#xa;飞行时间分钟 DurationinMinutes（integer整数）&#xa;英里距离 DistanceinMiles （integer）&#xa;起飞机场ID（int）&#xa;到达机场ID（int）" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;rounded=1;" vertex="1" parent="ySgIPh1-fb9vkYEjXV9L-4">
+          <mxGeometry y="30" width="270" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ySgIPh1-fb9vkYEjXV9L-8" value="机场airport" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="100" y="300" width="180" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ySgIPh1-fb9vkYEjXV9L-9" value="IATACode（string）&#xa;名称name （string）&#xa;城市city （string）&#xa;州state （string）&#xa;&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;rounded=1;" vertex="1" parent="ySgIPh1-fb9vkYEjXV9L-8">
+          <mxGeometry y="30" width="180" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="ySgIPh1-fb9vkYEjXV9L-10" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmany;rounded=1;endFill=0;" edge="1" parent="1" source="ySgIPh1-fb9vkYEjXV9L-9" target="ySgIPh1-fb9vkYEjXV9L-5">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="440" y="420" as="sourcePoint" />
+            <mxPoint x="540" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ySgIPh1-fb9vkYEjXV9L-11" value="起飞/到达于&lt;br&gt;departs/arrives at" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;" vertex="1" connectable="0" parent="ySgIPh1-fb9vkYEjXV9L-10">
+          <mxGeometry x="0.524" y="-2" relative="1" as="geometry">
+            <mxPoint x="-36" y="34" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ySgIPh1-fb9vkYEjXV9L-12" value="预订机票ticket" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="300" y="40" width="210" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ySgIPh1-fb9vkYEjXV9L-13" value="机票号码 ticket number （string）&#xa;价格price   （float）&#xa;航空公司确认号码(string)&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;rounded=1;" vertex="1" parent="ySgIPh1-fb9vkYEjXV9L-12">
+          <mxGeometry y="30" width="210" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ySgIPh1-fb9vkYEjXV9L-16" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmany;startArrow=ERone;rounded=1;startFill=0;" edge="1" parent="1" source="ySgIPh1-fb9vkYEjXV9L-2" target="ySgIPh1-fb9vkYEjXV9L-13">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="260" y="270" as="sourcePoint" />
+            <mxPoint x="360" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ySgIPh1-fb9vkYEjXV9L-20" value="购买" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;" vertex="1" connectable="0" parent="ySgIPh1-fb9vkYEjXV9L-16">
+          <mxGeometry x="0.1405" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ySgIPh1-fb9vkYEjXV9L-18" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERone;rounded=1;endFill=0;startFill=0;" edge="1" parent="1" source="ySgIPh1-fb9vkYEjXV9L-5" target="ySgIPh1-fb9vkYEjXV9L-13">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="290" y="320" as="sourcePoint" />
+            <mxPoint x="390" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ySgIPh1-fb9vkYEjXV9L-21" value="对应的航班" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;" vertex="1" connectable="0" parent="ySgIPh1-fb9vkYEjXV9L-18">
+          <mxGeometry x="0.3996" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ySgIPh1-fb9vkYEjXV9L-22" value="航空公司 Airline" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="520" y="390" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ySgIPh1-fb9vkYEjXV9L-23" value="名字Name（string）" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;rounded=1;" vertex="1" parent="ySgIPh1-fb9vkYEjXV9L-22">
+          <mxGeometry y="30" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ySgIPh1-fb9vkYEjXV9L-24" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;rounded=1;" edge="1" parent="1" source="ySgIPh1-fb9vkYEjXV9L-23" target="ySgIPh1-fb9vkYEjXV9L-5">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="380" y="420" as="sourcePoint" />
+            <mxPoint x="480" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ySgIPh1-fb9vkYEjXV9L-25" value="舱位flight class  " style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="-10" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ySgIPh1-fb9vkYEjXV9L-26" value="Name（string）" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;rounded=1;" vertex="1" parent="ySgIPh1-fb9vkYEjXV9L-25">
+          <mxGeometry y="30" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ySgIPh1-fb9vkYEjXV9L-28" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;rounded=1;" edge="1" parent="1" source="ySgIPh1-fb9vkYEjXV9L-26" target="ySgIPh1-fb9vkYEjXV9L-13">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="270" y="90" as="sourcePoint" />
+            <mxPoint x="370" y="-10" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
